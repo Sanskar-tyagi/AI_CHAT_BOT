@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import $ from "jquery";
 import axios from "axios";
 
 function Comp() {
@@ -9,8 +8,11 @@ function Comp() {
   const handleClick = async () => {
     try {
       const data = { prompt };
-      const response = await axios.post("http://localhost:8080/generate-response", data);
-      setResponse(response.response);
+      const response = await axios.post(
+        "http://localhost:8080/generate-response",
+        data
+      );
+      setResponse(response.data);
     } catch (error) {
       console.error(error);
       setResponse("Error generating response");
