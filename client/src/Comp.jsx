@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import $ from "jquery";
+import axios from "axios";
 
 function Comp() {
   const [prompt, setPrompt] = useState("");
@@ -8,7 +9,7 @@ function Comp() {
   const handleClick = async () => {
     try {
       const data = { prompt };
-      const response = await $.post("localhost:8080/generate-response", data);
+      const response = await axios.post("http://localhost:8080/generate-response", data);
       setResponse(response.response);
     } catch (error) {
       console.error(error);

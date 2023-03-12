@@ -1,7 +1,7 @@
 const express = require("express");
 const Router = express();
 const axios = require("axios");
-const OPEN_AI = require("../config/Utlis");
+const {OPEN_AI} = require("../config/Utlis");
 // we will define functions to handle req on this route
 const test = (req, res) => {
   res.send("Hello User");
