@@ -9,7 +9,7 @@ const test = (req, res) => {
 };
 
 const configuration = new Configuration({
-  apiKey: "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",
+  apiKey: OPEN_AI,
 });
 const openai = new OpenAIApi(configuration);
 

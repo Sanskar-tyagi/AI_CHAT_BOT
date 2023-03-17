@@ -1,2 +1,2 @@
-const OPEN_AI = "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";
+const OPEN_AI = "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";
 module.exports = { OPEN_AI };
