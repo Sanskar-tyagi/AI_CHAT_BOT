@@ -29,8 +29,6 @@ app.use(function (req, res, next) {
 const router = require("./Routes/Routes");
 app.use("/", router);
 
-// req --> frontend ans
-// server start
 app.listen(8080, () => {
   console.log("HOgy!!");
 });
